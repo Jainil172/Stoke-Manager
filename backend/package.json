@@ -1,0 +1,37 @@
+{
+  "name": "stockflow-backend",
+  "version": "1.0.0",
+  "description": "StockFlow Inventory Management System - Backend API (Phase 1)",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "stockflow",
+    "inventory",
+    "express",
+    "mysql",
+    "jwt"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "latest",
+    "cookie-parser": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-rate-limit": "^8.6.1",
+    "express-validator": "latest",
+    "helmet": "latest",
+    "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "latest",
+    "morgan": "latest",
+    "multer": "^2.2.0",
+    "mysql2": "latest",
+    "pdfkit": "^0.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}
