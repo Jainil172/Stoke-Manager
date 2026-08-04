@@ -1,7 +1,17 @@
 const apiHost = window.location.hostname || "localhost";
 
+function readStored(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return null;
+    return raw.startsWith('"') ? JSON.parse(raw) : raw;
+  } catch {
+    return null;
+  }
+}
+
 export async function downloadFile(path, filename) {
-  const token = localStorage.getItem("stockflow.token");
+  const token = readStored("stockflow.token");
   const response = await fetch(`http://${apiHost}:5000/api${path}`, {
     headers: token ? { Authorization: `Bearer ${token}` } : {},
   });
